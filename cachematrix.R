@@ -1,13 +1,13 @@
 ## makeMatrix function creates a matrix, and has set , get methods
 makeMatrix <- function(x = matrix()) {
   inv <- NULL
-  set <- function(y){
+  set <- function(y){ ##sets the elements of matrix
     x <<- y
-    inv <<- NULL
+    inv <<- NULL ##sets the initial values of matrix to NULL
   }
-  get <- function()x
-  setinverse <- function(inverse) inv <<- inverse
-  getinverse <- function() inv
+  get <- function()x ##get the value of the matrix
+  setinverse <- function(inverse) inv <<- inverse ##set the inverse of the matrix
+  getinverse <- function() inv ##get the inverse of the matrix
   list(set = set,
        get = get,
        setinverse=setinverse,

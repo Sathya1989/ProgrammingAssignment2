@@ -14,7 +14,8 @@ makeMatrix <- function(x = matrix()) {
        getinverse=getinverse)
 }
 
-##cacheInverse computes the inverse of a matrix
+##cacheInverse computes the inverse of a matrix if the cached data is not available. if the matrix values are already cacjed, the cached 
+##inverted value is returned
 cacheInverse <- function(x, ...){
   invr <- x$getinverse() ##trying to get the cached inverse
   if(!is.null(invr)){ ##if we get the cached inverse (i.e) not null
